@@ -7,7 +7,11 @@ export const addHunts = (hunts) => ({
 
 export const getHunts = (hunts) => {
   return async (dispatch) => {
-    const hunts = await getAllHunts();
-    dispatch(addHunts(hunts));
+    try {
+      const hunts = await getAllHunts();
+      dispatch(addHunts(hunts));
+    } catch (error) {
+      throw error;
+    }
   }
 };
