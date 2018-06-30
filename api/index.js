@@ -8,4 +8,4 @@ export const getAllHunts = async () => {
   } catch (error) {
     throw error;
   }
-}
+};

@@ -12,7 +12,7 @@ describe('getAllHunts', () => {
     successfulResponse = {
       status: 200,
       json: () => {
-        return Promise.resolve(mockHunts)
+        return Promise.resolve(mockHunts);
       }
     };
 
@@ -22,7 +22,7 @@ describe('getAllHunts', () => {
     };
 
     global.fetch = jest.fn().mockImplementation(() => {
-      return Promise.resolve(successfulResponse)
+      return Promise.resolve(successfulResponse);
     });
   });
 

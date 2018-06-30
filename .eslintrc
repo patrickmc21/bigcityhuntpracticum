@@ -54,10 +54,6 @@
 "allowSingleLine": true
 }
 ],
-"comma-dangle": [
-"error",
-"never"
-],
 "comma-spacing": [
 "error",
 {

@@ -13,5 +13,5 @@ export const getHunts = () => {
     } catch (error) {
       throw error;
     }
-  }
+  };
 };
