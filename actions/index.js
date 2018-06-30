@@ -5,7 +5,7 @@ export const addHunts = (hunts) => ({
   hunts
 });
 
-export const getHunts = (hunts) => {
+export const getHunts = () => {
   return async (dispatch) => {
     try {
       const hunts = await getAllHunts();
