@@ -20,7 +20,7 @@ const Blog = () => {
 
 const styles = StyleSheet.create({
   blog: {
-    height: (deviceSize.height / 8) * 7,
+    height: (deviceSize.height / 8) * 6,
     width: deviceSize.width,    
   },
 });
