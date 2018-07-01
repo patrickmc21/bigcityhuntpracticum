@@ -5,14 +5,17 @@ import {
   Platform,
   Dimensions
 } from 'react-native';
-import MapView from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+
+const deviceSize = Dimensions.get('window');
 
 class MapContainer extends Component<Props> {
 
   render() {
     return (
-      <View>
-        <MapView
+      <View style={styles.container}>
+        <MapView          
+          provider={ PROVIDER_GOOGLE }
           initialRegion={{
             latitude: 37.78825,
             longitude: -122.4324,
@@ -23,5 +26,12 @@ class MapContainer extends Component<Props> {
     )
   }
 };
+
+const styles = StyleSheet.create({
+  container: {
+    height: (deviceSize.height / 8) * 7,
+    width: deviceSize.width,    
+  },
+});
 
 export default MapContainer;
