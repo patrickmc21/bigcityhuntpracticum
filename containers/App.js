@@ -41,11 +41,13 @@ class App extends Component<Props> {
       return (
         <View style={styles.mapWrapper}>
           {
-            this.state.isLoading ? 
-            <Image
-              style={styles.loadingImage} 
-              source={require('../assets/images/loading-gif.gif')}
-            />
+            this.state.isLoading ?
+            <View style={styles.imageWrapper}> 
+              <Image
+                style={styles.loadingImage} 
+                source={require('../assets/images/loading-gif.gif')}
+              />
+            </View>
             :
             <MapContainer />
           }       
@@ -103,7 +105,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: (deviceSize.height / 8) * 7,
     width: deviceSize.width,
-    backgroundColor: 'blue'
+    backgroundColor: '#010101'    
   },
   tabNavBar: {    
     height: deviceSize.height / 8,
@@ -128,9 +130,18 @@ const styles = StyleSheet.create({
     height: (deviceSize.height / 8) * 6,
     width: deviceSize.width,
   },
+  imageWrapper: {
+    flex: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 170,
+    width: 170,
+    backgroundColor: '#A0D5FF',
+    borderRadius: 100, 
+  },
   loadingImage: {
     height: 200,
-    width: 200
+    width: 200,    
   }
 });
 
